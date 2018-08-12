@@ -89,6 +89,7 @@
                         <suiteXmlFile>${basedir}/src/test/resources/suite.xml</suiteXmlFile>
                     </suiteXmlFiles>
                     <systemPropertyVariables>
+                        <platform>android</platform>
                         <site>hk</site>
                     </systemPropertyVariables>
                 </configuration>
