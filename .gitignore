@@ -2,6 +2,7 @@
 target/
 test-output/
 .DS_Store
+apps/
 
 ### STS ###
 .apt_generated
