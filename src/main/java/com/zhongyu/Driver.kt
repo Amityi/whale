@@ -39,7 +39,7 @@ class Driver {
             capabilities.setCapability(MobileCapabilityType.APP, getApp("zzkko-release.app"))
             IOSDriver(address, capabilities)
         }
-        driver!!.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS)
+        driver!!.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS)
         return driver
     }
 
