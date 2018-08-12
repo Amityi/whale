@@ -8,14 +8,14 @@ import org.openqa.selenium.WebElement
 /**
  * @author ZhongYu
  */
-class HomePage(private val driver: MobileDriver<*>) {
+class HomePage(driver: MobileDriver<*>) {
 
     private var location = Location(driver)
     private var home = "home_element"
 
     fun getSkipEl(): WebElement = location.element("skip", home)
 
-    fun getMenuEL(): WebElement = driver.findElementByAccessibilityId("Open navigation drawer")
+    fun getMenuEL(): WebElement = location.element("menu", home)
 
     companion object {
         @JvmStatic

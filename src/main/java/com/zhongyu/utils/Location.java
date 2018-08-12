@@ -40,6 +40,8 @@ public class Location {
                     return driver.findElementById(value);
                 case "class":
                     return driver.findElementByClassName(value);
+                case "accessibility":
+                    return driver.findElementByAccessibilityId(value);
                 case "android_uiautomator":
                     return driver.findElement(MobileBy.AndroidUIAutomator(value));
             }
