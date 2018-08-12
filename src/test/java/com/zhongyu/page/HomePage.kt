@@ -14,7 +14,6 @@ class HomePage(private val driver: MobileDriver<*>) {
     fun getMenuEL(): WebElement = driver.findElementByAccessibilityId("Open navigation drawer")
 
     companion object {
-
         @JvmStatic
         fun main(args: Array<String>) {
             System.setProperty("platform", "android")
