@@ -30,17 +30,21 @@ public class Location {
             throw new RuntimeException("配置文件未找到！");
         }
         String location = iniSection.get(key);
-        String by = location.split(">")[0];
-        String value = location.split(">")[1];
-        switch (by) {
-            case "id":
-                return driver.findElementById(value);
-            case "class":
-                return driver.findElementByClassName(value);
-            case "android_uiautomator":
-                return driver.findElement(MobileBy.AndroidUIAutomator(value));
+        if (null == location) {
+            throw new RuntimeException("定位元素未找到！");
+        } else {
+            String by = location.split(">")[0];
+            String value = location.split(">")[1];
+            switch (by) {
+                case "id":
+                    return driver.findElementById(value);
+                case "class":
+                    return driver.findElementByClassName(value);
+                case "android_uiautomator":
+                    return driver.findElement(MobileBy.AndroidUIAutomator(value));
+            }
+            return driver.findElementByXPath(key);
         }
-        return driver.findElementByXPath(key);
     }
 
 }

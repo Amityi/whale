@@ -1,6 +1,7 @@
 package com.zhongyu.page
 
 import com.zhongyu.Driver
+import com.zhongyu.utils.Location
 import io.appium.java_client.MobileDriver
 import org.openqa.selenium.WebElement
 
@@ -9,7 +10,10 @@ import org.openqa.selenium.WebElement
  */
 class HomePage(private val driver: MobileDriver<*>) {
 
-    fun getSkipEl(): WebElement = driver.findElementById("tv_skip")
+    private var location = Location(driver)
+    private var home = "home_element"
+
+    fun getSkipEl(): WebElement = location.element("skip", home)
 
     fun getMenuEL(): WebElement = driver.findElementByAccessibilityId("Open navigation drawer")
 
