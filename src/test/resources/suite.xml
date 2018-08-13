@@ -2,7 +2,7 @@
 <suite name="Suite" verbose="1">
     <test name="Test">
         <classes>
-            <class name="com.zhongyu.test.Example"></class>
+            <class name="com.zhongyu.test.HomeTest"></class>
         </classes>
     </test>
 </suite>
