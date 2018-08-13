@@ -12,7 +12,7 @@ class LoginPage(driver: MobileDriver<*>) {
     private var location = Location(driver)
     private var login = "login_element"
 
-    fun getUseLoginEl(): WebElement = location.element("use_login", login)
+    fun getUseLoginEl(): WebElement = location.elements("use_login", login)[0]
 
     fun getEmailEl(): WebElement = location.element("email_input", login)
 
