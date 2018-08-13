@@ -1,0 +1,55 @@
+hk:
+  alias: HK
+  name: Hong Kong
+  chinese: 中文
+  language: zh-hk
+  address:
+    first_name: 宇
+    last_name: 鐘
+    address_1: 灣仔港灣道18號
+    address_2: 5506室
+    area: 灣仔區
+    city: 香港島
+    phone: 36049915
+    zip: 00852
+us:
+  alias: US
+  name: United States
+  chinese: 美国
+  language: en
+  address:
+    first_name: Stanley
+    last_name: Rodriguez
+    state: California
+    city: Westminster
+    address_1: Angie Drive
+    address_2: 4118
+    zip: 92683
+    phone: 6018853583
+mx:
+  alias: MX
+  name: Mexico
+  chinese: 墨西哥
+  language: es
+  address:
+    full_name: Jong - woo
+    zip: 04930
+    state: California
+    city: México
+    address_1: Pico de Verapaz 22 Jardines en la
+    address_2: Montaña 14210
+    phone: 8661213583
+es:
+  alias: ES
+  name: Spain
+  chinese: 西班牙
+  language: es
+  address:
+    first_name: Stanley
+    last_name: Rodriguez
+    address_1: Pico de Verapaz 22 Jardines en la
+    address_2: Montaña 14210
+    city: Westminster
+    state: Badajoz
+    phone: 6018853583
+    zip: 92683
