@@ -42,17 +42,16 @@ class ExtentTestNGIReporterListener : IReporter {
                 createSuiteResultNode = true
             }
             for (r in result.values) {
-                val resultNode: ExtentTest?
-                val context = r.testContext
-                if (createSuiteResultNode) {
+                val resultNode: ExtentTest? = if (createSuiteResultNode) {
                     if (null == suiteTest) {
-                        resultNode = extent!!.createTest(r.testContext.name)
+                        extent!!.createTest(r.testContext.name)
                     } else {
-                        resultNode = suiteTest.createNode(r.testContext.name)
+                        suiteTest.createNode(r.testContext.name)
                     }
                 } else {
-                    resultNode = suiteTest
+                    suiteTest
                 }
+                val context = r.testContext
                 if (resultNode != null) {
                     resultNode.model.name = suite.name + " : " + r.testContext.name
                     if (resultNode.model.hasCategory()) {
