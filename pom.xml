@@ -16,11 +16,13 @@
     </properties>
 
     <dependencies>
+        <!-- Appium支持 -->
         <dependency>
             <groupId>io.appium</groupId>
             <artifactId>java-client</artifactId>
             <version>${appium.version}</version>
         </dependency>
+        <!-- Kotlin语言支持 -->
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-stdlib</artifactId>
@@ -31,16 +33,25 @@
             <artifactId>kotlin-reflect</artifactId>
             <version>${kotlin.version}</version>
         </dependency>
+        <!-- TestNG单元测试 -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>${testng.version}</version>
         </dependency>
+        <!-- ini文件读取 -->
         <dependency>
             <groupId>org.ini4j</groupId>
             <artifactId>ini4j</artifactId>
             <version>0.5.4</version>
         </dependency>
+        <!-- yml文件读取 -->
+        <dependency>
+            <groupId>com.esotericsoftware.yamlbeans</groupId>
+            <artifactId>yamlbeans</artifactId>
+            <version>1.13</version>
+        </dependency>
+        <!-- 测试报告 -->
         <dependency>
             <groupId>com.aventstack</groupId>
             <artifactId>extentreports</artifactId>
@@ -50,6 +61,7 @@
 
     <build>
         <plugins>
+            <!-- 设置编译的JDK版本 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -60,6 +72,7 @@
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
+            <!-- Kotlin语言插件支持 -->
             <plugin>
                 <groupId>org.jetbrains.kotlin</groupId>
                 <artifactId>kotlin-maven-plugin</artifactId>
@@ -84,6 +97,7 @@
                     </execution>
                 </executions>
             </plugin>
+            <!-- 测试插件 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -94,6 +108,8 @@
                     <suiteXmlFiles>
                         <suiteXmlFile>${basedir}/src/test/resources/suite.xml</suiteXmlFile>
                     </suiteXmlFiles>
+                    <!-- 设置环境变量,可用使用下面方法更改其中的值 -->
+                    <!-- mvn test -D platform=iOS -->
                     <systemPropertyVariables>
                         <platform>android</platform>
                         <site>hk</site>
