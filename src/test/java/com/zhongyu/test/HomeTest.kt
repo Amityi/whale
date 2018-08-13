@@ -23,7 +23,7 @@ class HomeTest {
         homeBusiness = driver?.let { HomeBusiness(it) }
     }
 
-    @Test(priority = 0)
+    @Test(priority = 0, description = "执行登录测试")
     fun testLogin() {
         Reporter.log("登录测试")
         homeBusiness!!.login()
