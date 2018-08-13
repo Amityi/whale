@@ -3,6 +3,7 @@ package com.zhongyu.test
 import com.zhongyu.Driver
 import com.zhongyu.business.HomeBusiness
 import io.appium.java_client.MobileDriver
+import org.testng.Reporter
 import org.testng.annotations.AfterMethod
 import org.testng.annotations.BeforeClass
 import org.testng.annotations.Test
@@ -22,8 +23,9 @@ class HomeTest {
         homeBusiness = driver?.let { HomeBusiness(it) }
     }
 
-    @Test
+    @Test(priority = 0)
     fun testLogin() {
+        Reporter.log("登录测试")
         homeBusiness!!.login()
     }
 
