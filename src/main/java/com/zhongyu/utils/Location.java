@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 /**
  * @author ZhongYu
@@ -19,7 +20,7 @@ public class Location {
         this.driver = driver;
     }
 
-    public WebElement element(String key, Object section) {
+    private String location(String key, Object section) {
         Ini ini;
         Ini.Section iniSection;
         try {
@@ -29,12 +30,16 @@ public class Location {
         } catch (IOException e) {
             throw new RuntimeException("配置文件未找到！");
         }
-        String location = iniSection.get(key);
+        return iniSection.get(key);
+    }
+
+    public WebElement element(String key, Object section) {
+        String location = location(key, section);
+        String by = location.split(">")[0];
+        String value = location.split(">")[1];
         if (null == location) {
             throw new RuntimeException("定位元素未找到！");
         } else {
-            String by = location.split(">")[0];
-            String value = location.split(">")[1];
             switch (by) {
                 case "id":
                     return driver.findElementById(value);
@@ -46,6 +51,27 @@ public class Location {
                     return driver.findElement(MobileBy.AndroidUIAutomator(value));
             }
             return driver.findElementByXPath(key);
+        }
+    }
+
+    public List<WebElement> elements(String key, Object section) {
+        String location = location(key, section);
+        String by = location.split(">")[0];
+        String value = location.split(">")[1];
+        if (null == location) {
+            throw new RuntimeException("定位元素未找到！");
+        } else {
+            switch (by) {
+                case "id":
+                    return driver.findElementsById(value);
+                case "class":
+                    return driver.findElementsByClassName(value);
+                case "accessibility":
+                    return driver.findElementsByAccessibilityId(value);
+                case "android_uiautomator":
+                    return driver.findElements(MobileBy.AndroidUIAutomator(value));
+            }
+            return driver.findElementsByXPath(key);
         }
     }
 
