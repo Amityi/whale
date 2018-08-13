@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit
  */
 class Driver {
 
-    var driver: AppiumDriver<MobileElement>? = null
+    private var driver: AppiumDriver<MobileElement>? = null
 
     fun driver(): AppiumDriver<*>? {
         val capabilities = DesiredCapabilities()
