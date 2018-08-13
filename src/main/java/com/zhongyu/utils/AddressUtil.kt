@@ -3,7 +3,6 @@ package com.zhongyu.utils
 import com.esotericsoftware.yamlbeans.YamlConfig
 import com.esotericsoftware.yamlbeans.YamlException
 import com.esotericsoftware.yamlbeans.YamlReader
-
 import java.io.FileNotFoundException
 import java.io.FileReader
 
@@ -11,6 +10,14 @@ import java.io.FileReader
  * @author ZhongYu
  */
 class AddressUtil {
+
+    fun exists(root: String): Boolean {
+        val yml = yaml
+        if (null != yml!![root]) {
+            return true
+        }
+        return false
+    }
 
     fun getInfo(root: String, key: String): String {
         val yml = yaml
@@ -41,7 +48,7 @@ class AddressUtil {
         @Volatile
         private var addressUtil: AddressUtil? = null
 
-        private val instance: AddressUtil?
+        val instance: AddressUtil?
             get() {
                 if (addressUtil == null) {
                     synchronized(AddressUtil::class.java) {
@@ -75,6 +82,7 @@ class AddressUtil {
         fun main(args: Array<String>) {
             val info = AddressUtil.instance!!.getInfo("hk", "name")
             val address = AddressUtil.instance!!.getAddress("hk", "address_1")
+            print(AddressUtil.instance!!.exists("hk"))
             println(info)
             println(address)
         }

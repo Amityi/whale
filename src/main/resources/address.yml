@@ -1,8 +1,9 @@
 hk:
   alias: HK
   name: Hong Kong
-  chinese: 中文
-  language: zh-hk
+  chinese: 香港
+  language: zh
+  locale: HK
   address:
     first_name: 宇
     last_name: 鐘
@@ -17,6 +18,7 @@ us:
   name: United States
   chinese: 美国
   language: en
+  locale: US
   address:
     first_name: Stanley
     last_name: Rodriguez
@@ -31,6 +33,7 @@ mx:
   name: Mexico
   chinese: 墨西哥
   language: es
+  locale: MX
   address:
     full_name: Jong - woo
     zip: 04930
@@ -44,6 +47,7 @@ es:
   name: Spain
   chinese: 西班牙
   language: es
+  locale: ES
   address:
     first_name: Stanley
     last_name: Rodriguez
