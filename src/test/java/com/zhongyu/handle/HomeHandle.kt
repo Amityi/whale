@@ -12,6 +12,6 @@ class HomeHandle(driver: MobileDriver<*>) {
 
     fun clickSkip() = homePage.getSkipEl().click()
 
-    fun clickMenu() = homePage.getMenuEL().click()
+    fun clickMenu() = homePage.getMenuEl().click()
 
 }
