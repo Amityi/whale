@@ -2,6 +2,7 @@ package com.zhongyu.utils
 
 import io.appium.java_client.MobileBy
 import io.appium.java_client.MobileDriver
+import io.appium.java_client.MobileElement
 import org.openqa.selenium.WebElement
 
 /**
@@ -17,7 +18,7 @@ class Location(private val driver: MobileDriver<*>) {
             "id" -> return driver.findElementById(value)
             "class" -> return driver.findElementByClassName(value)
             "accessibility" -> return driver.findElementByAccessibilityId(value)
-            "android_uiautomator" -> return driver.findElement(MobileBy.AndroidUIAutomator(value))
+            "android_uiautomator" -> return driver.findElement(MobileBy.AndroidUIAutomator(value)) as MobileElement
         }
         return driver.findElementByXPath(value)
     }
