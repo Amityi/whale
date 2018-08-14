@@ -32,6 +32,7 @@ class Driver {
         if (StringUtils.isNotBlank(site) && StringUtils.isNotEmpty(site)) {
             var country = AddressUtil.instance!!.exists(site)
             if (country) {
+                //切换手机系统语言
                 capabilities.setCapability(MobileCapabilityType.LANGUAGE, AddressUtil.instance!!.getInfo(site, "language"))
                 capabilities.setCapability(MobileCapabilityType.LOCALE, AddressUtil.instance!!.getInfo(site, "locale"))
             } else {
