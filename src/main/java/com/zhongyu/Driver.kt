@@ -13,6 +13,7 @@ import org.openqa.selenium.remote.DesiredCapabilities
 import java.io.File
 import java.io.IOException
 import java.net.URL
+import java.util.concurrent.TimeUnit
 
 /**
  * @author ZhongYu
@@ -27,7 +28,7 @@ class Driver {
         val platform = System.getProperty("platform")
         val address = URL("http://127.0.0.1:4723/wd/hub")
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "none")
-        capabilities.setCapability(MobileCapabilityType.NO_RESET, false)
+        capabilities.setCapability(MobileCapabilityType.NO_RESET, true)
         if (StringUtils.isNotBlank(site) && StringUtils.isNotEmpty(site)) {
             var country = AddressUtil.instance!!.exists(site)
             if (country) {
@@ -55,7 +56,7 @@ class Driver {
             capabilities.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.zzkko.bussiness.login.ui.WelcomeActivity")
             AndroidDriver(address, capabilities)
         }
-//        driver!!.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS)
+        driver!!.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS)
         return driver
     }
 
