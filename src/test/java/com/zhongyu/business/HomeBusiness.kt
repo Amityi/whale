@@ -13,7 +13,7 @@ class HomeBusiness(driver: MobileDriver<*>) {
     private val homeHandle: HomeHandle = HomeHandle(driver)
     private val menuHandle: MenuHandle = MenuHandle(driver)
 
-    fun login() {
+    fun toLogin() {
         homeHandle.clickSkip()
         homeHandle.clickMenu()
         menuHandle.clickHeard()
