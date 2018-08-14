@@ -13,7 +13,6 @@ import org.openqa.selenium.remote.DesiredCapabilities
 import java.io.File
 import java.io.IOException
 import java.net.URL
-import java.util.concurrent.TimeUnit
 
 /**
  * @author ZhongYu
@@ -56,7 +55,7 @@ class Driver {
             capabilities.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.zzkko.bussiness.login.ui.WelcomeActivity")
             AndroidDriver(address, capabilities)
         }
-        driver!!.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS)
+//        driver!!.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS)
         return driver
     }
 

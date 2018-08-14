@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement
 /**
  * @author ZhongYu
  */
-class HomePage(driver: MobileDriver<*>) {
+class HomePage(private val driver: MobileDriver<*>) {
 
     private var location = Location(driver)
     private var home = "home_element"
@@ -19,8 +19,11 @@ class HomePage(driver: MobileDriver<*>) {
 
     fun getCountryEl(): WebElement = location.element("country", home)
 
-    //TODO: 使用真机再此处出现数字下标越界
-    fun getCountryButtonEl(): WebElement = location.elements("country_search_button", home)[1]
+    fun getCountryButtonEl(): WebElement {
+        //TODO: 此处需要等待，因为使用class定位，再拿到标题后就执行了，使用会出现地址下表越界问题
+        Thread.sleep(3000)
+        return location.elements("country_search_button", home)[1]
+    }
 
     fun getCountryInputEl(): WebElement = location.element("country_search_input", home)
 
@@ -33,14 +36,13 @@ class HomePage(driver: MobileDriver<*>) {
             var homePage = HomePage(android!!)
             homePage.getSkipEl().click()
             System.setProperty("site", "hk")
-            var site = "HK"
+            var site = "MX"
             if (homePage.getCountryEl().text != site) {
                 homePage.getCountryEl().click()
                 homePage.getCountryButtonEl().click()
-                homePage.getCountryInputEl().sendKeys("Hong Kong")
+                homePage.getCountryInputEl().sendKeys("Mexico")
                 homePage.getCountryResultEl().click()
             }
-            Thread.sleep(6000)
             android.quit()
         }
     }
