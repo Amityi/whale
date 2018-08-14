@@ -19,7 +19,7 @@ class Location(private val driver: MobileDriver<*>) {
             "accessibility" -> return driver.findElementByAccessibilityId(value)
             "android_uiautomator" -> return driver.findElement(MobileBy.AndroidUIAutomator(value))
         }
-        return driver.findElementByXPath(key)
+        return driver.findElementByXPath(value)
     }
 
     fun elements(key: String, section: Any): List<WebElement> {
@@ -32,7 +32,7 @@ class Location(private val driver: MobileDriver<*>) {
             "accessibility" -> return driver.findElementsByAccessibilityId(value)
             "android_uiautomator" -> return driver.findElements(MobileBy.AndroidUIAutomator(value))
         }
-        return driver.findElementsByXPath(key)
+        return driver.findElementsByXPath(value)
     }
 
 }
