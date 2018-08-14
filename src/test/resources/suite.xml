@@ -5,7 +5,8 @@
     </listeners>
     <test name="Test">
         <classes>
-            <class name="com.zhongyu.test.HomeTest"></class>
+            <class name="com.zhongyu.test.MainTest"/>
+            <class name="com.zhongyu.test.HomeTest"/>
         </classes>
     </test>
 </suite>
