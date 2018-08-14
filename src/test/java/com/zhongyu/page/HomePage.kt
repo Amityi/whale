@@ -19,6 +19,7 @@ class HomePage(driver: MobileDriver<*>) {
 
     fun getCountryEl(): WebElement = location.element("country", home)
 
+    //TODO: 使用真机再此处出现数字下标越界
     fun getCountryButtonEl(): WebElement = location.elements("country_search_button", home)[1]
 
     fun getCountryInputEl(): WebElement = location.element("country_search_input", home)
