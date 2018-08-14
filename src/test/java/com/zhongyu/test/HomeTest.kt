@@ -30,7 +30,7 @@ class HomeTest {
     fun testLogin() {
         Reporter.log("登录测试")
         homeBusiness!!.toLogin()
-        loginBusiness!!.login("zhongyu.vip@gmail.com", "C*H6eVEW.+")
+        loginBusiness!!.login("zhongyu.vip@gmail.com", "Shein12345")
     }
 
     @AfterMethod
