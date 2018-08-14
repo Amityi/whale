@@ -26,16 +26,11 @@ class HomeTest {
         loginBusiness = driver?.let { LoginBusiness(it) }
     }
 
-    @Test(priority = 10, description = "执行登录测试")
+    @Test(priority = 2, description = "执行登录测试")
     fun testLogin() {
         Reporter.log("登录测试")
         homeBusiness!!.login()
         loginBusiness!!.login("zhongyu.vip@gmail.com", "Zhongyu1.")
-    }
-
-    @Test(priority = 0)
-    fun changeCountry() {
-        Reporter.log("切换站点")
     }
 
     @AfterMethod
