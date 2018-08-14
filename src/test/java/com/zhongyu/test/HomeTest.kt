@@ -29,8 +29,8 @@ class HomeTest {
     @Test(priority = 2, description = "执行登录测试")
     fun testLogin() {
         Reporter.log("登录测试")
-        homeBusiness!!.toLogin()
-        loginBusiness!!.login("zhongyu.vip@gmail.com", "Shein12345")
+        homeBusiness!!.toLogin("zhongyu.vip@gmail.com", "Shein12345")
+//        loginBusiness!!.login("zhongyu.vip@gmail.com", "Shein12345")
     }
 
     @AfterMethod

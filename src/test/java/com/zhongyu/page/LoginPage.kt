@@ -18,6 +18,8 @@ class LoginPage(driver: MobileDriver<*>) {
 
     fun getPasswordEl(): WebElement = location.element("password_input", login)
 
+    fun getShowPasswordEl(): WebElement = location.element("show_password", login)
+
     fun getSubmitButtonEl(): WebElement = location.element("submit_button", login)
 
 }

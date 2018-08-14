@@ -16,6 +16,8 @@ class LoginHandle(driver: MobileDriver<*>) {
 
     fun sendPassword(password: String) = loginPage.getPasswordEl().sendKeys(password)
 
+    fun clickShowPassword() = loginPage.getShowPasswordEl().click()
+
     fun clickSubmitButton() = loginPage.getSubmitButtonEl().click()
 
 }

@@ -13,6 +13,7 @@ class LoginBusiness(driver: MobileDriver<*>) {
     fun login(email: String, password: String) {
         loginHandle.clickUseLogin()
         loginHandle.sendEmail(email)
+        loginHandle.clickShowPassword()
         loginHandle.sendPassword(password)
         loginHandle.clickSubmitButton()
     }

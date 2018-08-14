@@ -1,6 +1,7 @@
 package com.zhongyu.business
 
 import com.zhongyu.handle.HomeHandle
+import com.zhongyu.handle.LoginHandle
 import com.zhongyu.handle.MenuHandle
 import com.zhongyu.utils.AddressUtil
 import io.appium.java_client.MobileDriver
@@ -12,11 +13,21 @@ class HomeBusiness(driver: MobileDriver<*>) {
 
     private val homeHandle: HomeHandle = HomeHandle(driver)
     private val menuHandle: MenuHandle = MenuHandle(driver)
+    private val loginHandle: LoginHandle = LoginHandle(driver)
 
-    fun toLogin() {
+    fun toLogin(email: String, password: String) {
         homeHandle.clickSkip()
         homeHandle.clickMenu()
-        menuHandle.clickHeard()
+        try {
+            menuHandle.getNickname()
+        } catch (e: Exception) {
+            menuHandle.clickHeard()
+            loginHandle.clickUseLogin()
+            loginHandle.sendEmail(email)
+            loginHandle.clickShowPassword()
+            loginHandle.sendPassword(password)
+            loginHandle.clickSubmitButton()
+        }
     }
 
     fun switch() {

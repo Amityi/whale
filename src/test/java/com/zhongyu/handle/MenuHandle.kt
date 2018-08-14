@@ -12,4 +12,6 @@ class MenuHandle(driver: MobileDriver<*>) {
 
     fun clickHeard() = menuPage.getHeardEl().click()
 
+    fun getNickname(): String = menuPage.getNickNameEl().getAttribute("text")
+
 }
