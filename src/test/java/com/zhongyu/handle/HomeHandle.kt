@@ -14,4 +14,14 @@ class HomeHandle(driver: MobileDriver<*>) {
 
     fun clickMenu() = homePage.getMenuEl().click()
 
+    fun clickCountry() = homePage.getCountryEl().click()
+
+    fun getCountryText(): String = homePage.getCountryEl().text
+
+    fun clickCountryButton() = homePage.getCountryButtonEl().click()
+
+    fun sendCountryInfo(country: String) = homePage.getCountryInputEl().sendKeys(country)
+
+    fun selectResultCountry() = homePage.getCountryResultEl().click()
+
 }
