@@ -31,6 +31,7 @@ class HomePage(driver: MobileDriver<*>) {
             var android: MobileDriver<*>? = Driver.instance!!.driver()
             var homePage = HomePage(android!!)
             homePage.getSkipEl().click()
+            System.setProperty("site", "hk")
             var site = "HK"
             if (homePage.getCountryEl().text != site) {
                 homePage.getCountryEl().click()

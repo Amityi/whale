@@ -89,7 +89,6 @@ class Driver {
 
         @JvmStatic
         fun main(args: Array<String>) {
-            System.setProperty("site", "hk")
             val driver = Driver.instance!!.driver()
             driver!!.findElementById("tv_skip").click()
             driver.quit()
