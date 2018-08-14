@@ -26,6 +26,7 @@ class MainTest {
     @Test(priority = 0)
     fun switchCountry() {
         Reporter.log("切换站点")
+        homeBusiness!!.switch()
     }
 
     @AfterClass
