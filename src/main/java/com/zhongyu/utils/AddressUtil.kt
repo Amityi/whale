@@ -34,7 +34,7 @@ class AddressUtil {
         val yml = yaml
         try {
             val maps = yml!![root] as Map<*, *>
-            //TODO: 此处写死,address.yml中必须与此一致
+            // 此处写死,address.yml中必须与此一致
             val address = maps["address"] as Map<String, Any>
             return address[key].toString()
         } catch (e: NullPointerException) {
