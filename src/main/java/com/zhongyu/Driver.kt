@@ -47,7 +47,8 @@ class Driver {
             IOSDriver(address, capabilities)
         } else {
             capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, Platform.ANDROID)
-            capabilities.setCapability(MobileCapabilityType.APP, "https://kaya.oss-cn-shanghai.aliyuncs.com/shein/zzkko-google-release.apk")
+            //capabilities.setCapability(MobileCapabilityType.APP, "https://kaya.oss-cn-shanghai.aliyuncs.com/shein/zzkko-google-release.apk")
+            capabilities.setCapability(MobileCapabilityType.APP, getApp("zzkko-google-release.apk"))
             capabilities.setCapability(AndroidMobileCapabilityType.UNICODE_KEYBOARD, false)
             capabilities.setCapability(AndroidMobileCapabilityType.RESET_KEYBOARD, false)
             capabilities.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.zzkko")
