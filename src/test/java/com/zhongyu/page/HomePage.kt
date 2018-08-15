@@ -1,6 +1,7 @@
 package com.zhongyu.page
 
 import com.zhongyu.Driver
+import com.zhongyu.utils.AddressUtil
 import com.zhongyu.utils.Location
 import io.appium.java_client.MobileDriver
 import org.openqa.selenium.WebElement
@@ -31,13 +32,15 @@ class HomePage(private val driver: MobileDriver<*>) {
             var android: MobileDriver<*>? = Driver.instance!!.driver()
             var homePage = HomePage(android!!)
             homePage.getSkipEl().click()
-            System.setProperty("site", "hk")
-            var site = "HK"
-            if (homePage.getCountryEl().text != site) {
-                homePage.getCountryEl().click()
-                homePage.getCountryButtonEl().click()
-                homePage.getCountryInputEl().sendKeys("Mexico")
-                homePage.getCountryResultEl().click()
+            var site = "US"
+            var exists = AddressUtil.instance!!.exists(site)
+            if (exists) {
+                if (homePage.getCountryEl().text != site) {
+                    homePage.getCountryEl().click()
+                    homePage.getCountryButtonEl().click()
+                    homePage.getCountryInputEl().sendKeys("Hong Kong")
+                    homePage.getCountryResultEl().click()
+                }
             }
             android.quit()
         }
