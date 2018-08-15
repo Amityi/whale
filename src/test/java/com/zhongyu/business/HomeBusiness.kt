@@ -33,9 +33,8 @@ class HomeBusiness(driver: MobileDriver<*>) {
     fun switch() {
         homeHandle.clickSkip()
         val site = System.getProperty("site")
-        val alias = AddressUtil.instance!!.getInfo(site, "alias")
         val countryName = homeHandle.getCountryText()
-        if (countryName != alias) {
+        if (countryName != site) {
             homeHandle.clickCountry()
             homeHandle.clickCountryButton()
             val country = AddressUtil.instance!!.getInfo(site, "name")

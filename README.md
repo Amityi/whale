@@ -9,6 +9,8 @@
 mvn test -D site=hk
 ```
 
+[站点配置](http://wiki.dotfashion.cn/pages/viewpage.action?pageId=22147546)
+
 ### 货到付款(COD模块)
 
 ### 用户模块
