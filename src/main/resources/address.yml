@@ -1,20 +1,4 @@
-hk:
-  alias: HK
-  name: Hong Kong
-  chinese: 香港
-  language: zh
-  locale: HK
-  address:
-    first_name: 宇
-    last_name: 鐘
-    address_1: 灣仔港灣道18號
-    address_2: 5506室
-    area: 灣仔區
-    city: 香港島
-    phone: 36049915
-    zip: 00852
-us:
-  alias: US
+US:
   name: United States
   chinese: 美国
   language: en
@@ -28,8 +12,7 @@ us:
     address_2: 4118
     zip: 92683
     phone: 6018853583
-mx:
-  alias: MX
+MX:
   name: Mexico
   chinese: 墨西哥
   language: es
@@ -42,8 +25,7 @@ mx:
     address_1: Pico de Verapaz 22 Jardines en la
     address_2: Montaña 14210
     phone: 8661213583
-es:
-  alias: ES
+ES:
   name: Spain
   chinese: 西班牙
   language: es
@@ -57,3 +39,17 @@ es:
     state: Badajoz
     phone: 6018853583
     zip: 92683
+HK:
+  name: Hong Kong
+  chinese: 香港
+  language: zh
+  locale: HK
+  address:
+    first_name: 宇
+    last_name: 鐘
+    address_1: 灣仔港灣道18號
+    address_2: 5506室
+    area: 灣仔區
+    city: 香港島
+    phone: 36049915
+    zip: 00852
