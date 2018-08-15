@@ -19,11 +19,7 @@ class HomePage(private val driver: MobileDriver<*>) {
 
     fun getCountryEl(): WebElement = location.element("country", home)
 
-    fun getCountryButtonEl(): WebElement {
-        //TODO: 此处需要等待，因为使用class定位，再拿到标题后就执行了，使用会出现地址下表越界问题
-        Thread.sleep(3000)
-        return location.elements("country_search_button", home)[1]
-    }
+    fun getCountryButtonEl(): WebElement = location.element("country_search_button", home)
 
     fun getCountryInputEl(): WebElement = location.element("country_search_input", home)
 
@@ -36,7 +32,7 @@ class HomePage(private val driver: MobileDriver<*>) {
             var homePage = HomePage(android!!)
             homePage.getSkipEl().click()
             System.setProperty("site", "hk")
-            var site = "MX"
+            var site = "HK"
             if (homePage.getCountryEl().text != site) {
                 homePage.getCountryEl().click()
                 homePage.getCountryButtonEl().click()
