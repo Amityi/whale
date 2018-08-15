@@ -24,7 +24,7 @@ class AddressTest {
 
     @Test
     fun testAddAddress() {
-        menuBusiness!!.addAddrsss()
+        menuBusiness!!.addAddress()
     }
 
     @Test

@@ -12,7 +12,7 @@ class MenuBusiness(driver: MobileDriver<*>) {
     private val homeHandle: HomeHandle = HomeHandle(driver)
     private val menuHandle: MenuHandle = MenuHandle(driver)
 
-    fun addAddrsss() {
+    fun addAddress() {
         homeHandle.clickSkip()
         homeHandle.clickMenu()
         menuHandle.clickAddress()
