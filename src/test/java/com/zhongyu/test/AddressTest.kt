@@ -27,6 +27,16 @@ class AddressTest {
         menuBusiness!!.addAddrsss()
     }
 
+    @Test
+    fun testDeleteAddress(){
+
+    }
+
+    @Test
+    fun testUpdateAddress(){
+
+    }
+
     @AfterMethod
     @Throws(Exception::class)
     fun tearDown() {
