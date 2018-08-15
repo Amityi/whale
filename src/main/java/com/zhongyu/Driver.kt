@@ -56,7 +56,7 @@ class Driver {
             capabilities.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.zzkko.bussiness.login.ui.WelcomeActivity")
             AndroidDriver(address, capabilities)
         }
-        driver!!.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS)
+        driver?.let { it.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS) }
         return driver
     }
 
