@@ -9,7 +9,7 @@
 mvn test -D site=hk
 ```
 
-- Appium
+- Appium inspector
 ```json
 {
   "platformName": "Android",
