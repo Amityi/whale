@@ -16,4 +16,6 @@ class MenuPage(driver: MobileDriver<*>) {
 
     fun getNickNameEl(): WebElement = location.element("nickname", menu)
 
+    fun getAddressEl(): WebElement = location.element("address", menu)
+
 }

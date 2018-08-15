@@ -14,4 +14,6 @@ class MenuHandle(driver: MobileDriver<*>) {
 
     fun getNickname(): String = menuPage.getNickNameEl().getAttribute("text")
 
+    fun clickAddress() = menuPage.getAddressEl().click()
+
 }
