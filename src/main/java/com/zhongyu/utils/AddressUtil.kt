@@ -80,9 +80,9 @@ class AddressUtil {
 
         @JvmStatic
         fun main(args: Array<String>) {
-            val info = AddressUtil.instance!!.getInfo("hk", "name")
-            val address = AddressUtil.instance!!.getAddress("hk", "address_1")
-            print(AddressUtil.instance!!.exists("hk"))
+            val info = AddressUtil.instance!!.getInfo("US", "name")
+            val address = AddressUtil.instance!!.getAddress("US", "locale")
+            println(AddressUtil.instance!!.exists("US"))
             println(info)
             println(address)
         }
