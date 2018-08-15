@@ -112,7 +112,8 @@
                     <!-- mvn test -D platform=iOS -->
                     <systemPropertyVariables>
                         <platform>android</platform>
-                        <site>hk</site>
+                        <!-- 站点 -->
+                        <site>HK</site>
                     </systemPropertyVariables>
                 </configuration>
             </plugin>
