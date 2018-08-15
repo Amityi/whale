@@ -1,7 +1,7 @@
 package com.zhongyu.test
 
 import com.zhongyu.Driver
-import com.zhongyu.business.MenuBusiness
+import com.zhongyu.business.AddressBusiness
 import io.appium.java_client.MobileDriver
 import org.testng.annotations.AfterMethod
 import org.testng.annotations.BeforeMethod
@@ -13,26 +13,26 @@ import org.testng.annotations.Test
 class AddressTest {
 
     private var driver: MobileDriver<*>? = null
-    private var menuBusiness: MenuBusiness? = null
+    private var addressBusiness: AddressBusiness? = null
 
     @BeforeMethod
     @Throws(Exception::class)
     fun setUp() {
         driver = Driver.instance!!.driver()
-        menuBusiness = driver?.let { MenuBusiness(it) }
+        addressBusiness = driver?.let { AddressBusiness(it) }
     }
 
-    @Test
+    @Test(priority = 2)
     fun testAddAddress() {
-        menuBusiness!!.addAddress()
+        addressBusiness!!.addAddress()
     }
 
-    @Test
+    @Test(enabled = false)
     fun testDeleteAddress(){
 
     }
 
-    @Test
+    @Test(enabled = false)
     fun testUpdateAddress(){
 
     }

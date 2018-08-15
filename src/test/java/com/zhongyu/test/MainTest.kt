@@ -21,7 +21,7 @@ class MainTest {
         homeBusiness = driver?.let { HomeBusiness(it) }
     }
 
-    @Test(priority = 2, description = "执行登录测试")
+    @Test(priority = 1, description = "执行登录测试")
     fun loginSuccess() {
         Reporter.log("登录测试")
         homeBusiness!!.toLogin("zhongyu.vip@gmail.com", "Shein12345")

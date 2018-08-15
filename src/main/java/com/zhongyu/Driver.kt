@@ -57,6 +57,7 @@ class Driver {
             AndroidDriver(address, capabilities)
         }
         driver?.let { it.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS) }
+//        driver!!.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS)
         return driver
     }
 

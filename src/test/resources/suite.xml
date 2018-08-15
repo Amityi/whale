@@ -6,6 +6,7 @@
     <test name="Test">
         <classes>
             <class name="com.zhongyu.test.MainTest"/>
+            <class name="com.zhongyu.test.AddressTest"/>
         </classes>
     </test>
 </suite>
