@@ -11,6 +11,7 @@ class CategoryPage(driver: MobileDriver<*>) {
 
     private val location = Location(driver)
     private val category = "category_element"
+    private val goods = "goods_element"
 
     fun getTopsCnEl(): WebElement = location.element("tops_cn", category)
 
@@ -21,5 +22,9 @@ class CategoryPage(driver: MobileDriver<*>) {
     fun getTShirtEnEl(): WebElement = location.element("t_shirt_en", category)
 
     fun getTShirtEsEl(): WebElement = location.element("t_shirt_es", category)
+
+    fun getThreeEl(): WebElement = location.element("three", goods)
+
+    fun getItemEl(): WebElement = location.elements("item", goods)[2]
 
 }
