@@ -18,6 +18,7 @@ class AddressBusiness(driver: MobileDriver<*>) {
     private val addressHandle: AddressHandle = AddressHandle(driver)
 
     fun addAddress() {
+        //TODO: 需要判断当前添加地址的国家地区是否和测试站点一致
         homeHandle.clickSkip()
         homeHandle.clickMenu()
         menuHandle.clickAddress()
