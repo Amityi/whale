@@ -14,4 +14,10 @@ class CategoryHandle(driver: MobileDriver<*>) {
 
     fun clickTopsEn() = categoryPage.getTopsEnEl().click()
 
+    fun clickTShirtCn() = categoryPage.getTShirtCnEl().click()
+
+    fun clickTShirtEn() = categoryPage.getTShirtEnEl().click()
+
+    fun clickTShirtEs() = categoryPage.getTShirtEsEl().click()
+
 }

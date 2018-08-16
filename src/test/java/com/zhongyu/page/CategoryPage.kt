@@ -16,4 +16,10 @@ class CategoryPage(driver: MobileDriver<*>) {
 
     fun getTopsEnEl(): WebElement = location.element("tops_en", category)
 
+    fun getTShirtCnEl(): WebElement = location.element("t_shirt_cn", category)
+
+    fun getTShirtEnEl(): WebElement = location.element("t_shirt_en", category)
+
+    fun getTShirtEsEl(): WebElement = location.element("t_shirt_es", category)
+
 }

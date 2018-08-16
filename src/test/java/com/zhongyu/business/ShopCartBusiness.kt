@@ -16,6 +16,7 @@ class ShopCartBusiness(driver: MobileDriver<*>) {
         homeHandle.clickSkip()
         homeHandle.clickCategory()
         categoryHandle.clickTopsEn()
+        categoryHandle.clickTShirtEs()
     }
 
 }
