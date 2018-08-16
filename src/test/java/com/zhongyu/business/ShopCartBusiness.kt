@@ -13,6 +13,7 @@ class ShopCartBusiness(driver: MobileDriver<*>) {
     private val categoryHandle: CategoryHandle = CategoryHandle(driver)
 
     fun addToCart() {
+        //TODO: 需要判断当前使用的语言
         homeHandle.clickSkip()
         homeHandle.clickCategory()
         categoryHandle.clickTopsEn()
