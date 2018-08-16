@@ -24,7 +24,10 @@ class ShopCartTest {
 
     @AfterMethod
     @Throws(Exception::class)
-    fun tearDown() = driver!!.quit()
+    fun tearDown() {
+        Thread.sleep(6000)
+        driver!!.quit()
+    }
 
     @Test
     fun testAddCart() {

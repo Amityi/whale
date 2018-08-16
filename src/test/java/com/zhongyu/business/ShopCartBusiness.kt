@@ -1,6 +1,7 @@
 package com.zhongyu.business
 
 import com.zhongyu.handle.CategoryHandle
+import com.zhongyu.handle.DetailHandle
 import com.zhongyu.handle.HomeHandle
 import io.appium.java_client.MobileDriver
 
@@ -11,6 +12,7 @@ class ShopCartBusiness(driver: MobileDriver<*>) {
 
     private val homeHandle: HomeHandle = HomeHandle(driver)
     private val categoryHandle: CategoryHandle = CategoryHandle(driver)
+    private val detailHandle: DetailHandle = DetailHandle(driver)
 
     fun addToCart() {
         //TODO: 需要判断当前使用的语言
@@ -18,6 +20,11 @@ class ShopCartBusiness(driver: MobileDriver<*>) {
         homeHandle.clickCategory()
         categoryHandle.clickTopsEn()
         categoryHandle.clickTShirtEs()
+        categoryHandle.clickThree()
+        categoryHandle.clickItem()
+//        detailHandle.clickComment()
+        detailHandle.clickSize()
+        detailHandle.clickBuy()
     }
 
 }
