@@ -14,6 +14,8 @@ class HomeHandle(driver: MobileDriver<*>) {
 
     fun clickMenu() = homePage.getMenuEl().click()
 
+    fun clickCategory() = homePage.getCategoryEl().click()
+
     fun clickCountry() = homePage.getCountryEl().click()
 
     fun getCountryText(): String = homePage.getCountryEl().text

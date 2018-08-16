@@ -16,6 +16,8 @@ class HomePage(driver: MobileDriver<*>) {
 
     fun getMenuEl(): WebElement = location.element("menu", home)
 
+    fun getCategoryEl(): WebElement = location.elements("category", home)[1]
+
     fun getCountryEl(): WebElement = location.element("country", home)
 
     fun getCountryButtonEl(): WebElement = location.element("country_search_button", home)
