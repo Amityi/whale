@@ -18,13 +18,13 @@ class AddressBusiness(driver: MobileDriver<*>) {
     private val addressHandle: AddressHandle = AddressHandle(driver)
 
     fun addAddress() {
-        logger.info("添加收货地址")
         homeHandle.clickSkip()
         homeHandle.clickMenu()
         menuHandle.clickAddress()
         addressHandle.clickAddAddress()
         addressHandle.sendFirstName("宇")
         addressHandle.sendLastName("鐘")
+        //TODO: 此处需要需要地址输入框问题
         addressHandle.sendAddress1("灣仔港灣道18號")
         addressHandle.sendAddress2("5506室")
         addressHandle.sendArea("灣仔區")

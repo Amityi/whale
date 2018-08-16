@@ -26,6 +26,7 @@ class AddressTest {
 
     @Test(priority = 2)
     fun testAddAddress() {
+        logger.info("执行添加地址测试")
         addressBusiness!!.addAddress()
     }
 
