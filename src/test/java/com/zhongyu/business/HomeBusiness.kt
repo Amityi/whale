@@ -24,7 +24,6 @@ class HomeBusiness(driver: MobileDriver<*>) {
             val country = AddressUtil.instance!!.getInfo(site, "name")
             homeHandle.sendCountryInfo(country)
             homeHandle.selectResultCountry()
-            homeHandle.clickCountry()
         } else {
             logger.info("测试站点一致,不需要切换")
         }
