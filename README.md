@@ -16,8 +16,7 @@ mvn test -D site=hk
   "deviceName": "MuMu",
   "appPackage": "com.zzkko",
   "appActivity": "com.zzkko.bussiness.login.ui.WelcomeActivity",
-  "noReset": true,
-  "app": "C:\\Users\\Shein\\Documents\\GitHub\\whale\\apps\\zzkko-google-release.apk"
+  "noReset": true
 }
 ```
 
