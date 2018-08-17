@@ -12,6 +12,8 @@ class SettingPage(driver: MobileDriver<*>) {
     private val location = Location(driver)
     private val setting = "setting_element"
 
+    fun getChangeCurrencyEl(): WebElement = location.element("change_currency", setting)
+
     fun getChangePasswordEl(): WebElement = location.element("change_password", setting)
 
     fun getOldPasswordEl(): WebElement = location.element("old_password", setting)

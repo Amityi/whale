@@ -29,6 +29,13 @@ class SettingBusiness(driver: MobileDriver<*>) {
         menuHandle.clickCurrency("TRY")
     }
 
+    fun change2Currency(){
+        init()
+        menuHandle.clickSetting()
+        settingHandle.clickChangeCurrency()
+        menuHandle.clickCurrency("HKD")
+    }
+
     fun changePassword() {
         init()
         logger.info("修改密码")

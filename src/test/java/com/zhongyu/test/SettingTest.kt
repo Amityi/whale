@@ -36,6 +36,12 @@ class SettingTest {
     }
 
     @Test
+    fun testChange2Currency(){
+        //和上面操作完成后一样，需要验证商品中的货币是否也更改
+        settingBusiness!!.change2Currency()
+    }
+
+    @Test
     fun testChangePassword() {
         settingBusiness!!.changePassword()
     }

@@ -10,6 +10,8 @@ class SettingHandle(driver: MobileDriver<*>) {
 
     private val settingPage: SettingPage = SettingPage(driver)
 
+    fun clickChangeCurrency() = settingPage.getChangeCurrencyEl().click()
+
     fun clickChangePassword() = settingPage.getChangePasswordEl().click()
 
     fun sendOldPassword(oldPassword: String) = settingPage.getOldPasswordEl().sendKeys(oldPassword)
