@@ -39,6 +39,34 @@ ES:
     state: Badajoz
     phone: 6018853583
     zip: 92683
+FR:
+  name: France
+  chinese: 法国
+  language: es
+  locale: FR
+  address:
+    first_name: Stanley
+    last_name: Rodriguez
+    address_1: Pico de Verapaz 22 Jardines en la
+    address_2: Montaña 14210
+    city: Westminster
+    state: Badajoz
+    phone: 6018853583
+    zip: 92683
+IN:
+  name: India
+  chinese: 印度
+  language: es
+  locale: FR
+  address:
+    first_name: Stanley
+    last_name: Rodriguez
+    address_1: Pico de Verapaz 22 Jardines en la
+    address_2: Montaña 14210
+    city: Westminster
+    state: Badajoz
+    phone: 6018853583
+    zip: 92683
 HK:
   name: Hong Kong
   chinese: 香港
