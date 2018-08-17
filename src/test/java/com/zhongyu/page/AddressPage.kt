@@ -20,6 +20,8 @@ class AddressPage(driver: MobileDriver<*>) {
 
     fun getConfirmDelete(): WebElement = location.element("confirm_delete", address)
 
+    fun getCountryEl(): WebElement = location.element("country", address)
+
     fun getFirstNameEl(): WebElement = location.element("first_name", address)
 
     fun getLastNameEl(): WebElement = location.element("last_name", address)

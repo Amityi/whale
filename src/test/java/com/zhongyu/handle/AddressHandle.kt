@@ -18,6 +18,10 @@ class AddressHandle(driver: MobileDriver<*>) {
 
     fun clickConfirmDelete() = addressPage.getConfirmDelete().click()
 
+    fun getCountryText(): String = addressPage.getCountryEl().text
+
+    fun clickCountry() = addressPage.getCountryEl().click()
+
     fun sendFirstName(firstName: String) = addressPage.getFirstNameEl().sendKeys(firstName)
 
     fun sendLastName(lastName: String) = addressPage.getLastNameEl().sendKeys(lastName)
