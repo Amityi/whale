@@ -24,7 +24,7 @@ class SettingBusiness(driver: MobileDriver<*>) {
         println(menuHandle.getCurrencyText())
         logger.info("更改货币")
         menuHandle.clickCurrency()
-        menuHandle.clickCorrency("TRY")
+        menuHandle.clickCurrency("TRY")
     }
 
 }

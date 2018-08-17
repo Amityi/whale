@@ -20,6 +20,6 @@ class MenuHandle(driver: MobileDriver<*>) {
 
     fun getCurrencyText() = menuPage.getCurrencyEl().text!!
 
-    fun clickCorrency(currency: String) = menuPage.getCurrencyTextEl(currency).click()
+    fun clickCurrency(currency: String) = menuPage.getCurrencyTextEl(currency).click()
 
 }
