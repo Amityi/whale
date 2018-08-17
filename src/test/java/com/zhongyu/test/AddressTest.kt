@@ -43,7 +43,6 @@ class AddressTest {
     @AfterMethod
     @Throws(Exception::class)
     fun tearDown() {
-        Thread.sleep(3000)
         driver!!.quit()
     }
 
