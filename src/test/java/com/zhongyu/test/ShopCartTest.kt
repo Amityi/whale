@@ -34,4 +34,9 @@ class ShopCartTest {
         assertNotEquals(count, old)
     }
 
+    @Test
+    fun testBuy(){
+        shopCartBusiness!!.buy()
+    }
+
 }
