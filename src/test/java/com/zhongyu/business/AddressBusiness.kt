@@ -27,10 +27,10 @@ class AddressBusiness(driver: MobileDriver<*>) {
     fun addAddress() {
         init()
         //TODO: 需要判断当前添加地址的国家地区是否和测试站点一致
+        //TODO: 此处需要需要地址输入框问题
         addressHandle.clickAddAddress()
         addressHandle.sendFirstName("宇")
         addressHandle.sendLastName("鐘")
-        //TODO: 此处需要需要地址输入框问题
         addressHandle.sendAddress1("灣仔港灣道18號")
         addressHandle.sendAddress2("5506室")
         addressHandle.sendArea("灣仔區")
