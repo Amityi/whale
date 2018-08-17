@@ -31,7 +31,7 @@ class Location(private val driver: MobileDriver<*>) {
             "id" -> return driver.findElementsById(value)
             "class" -> return driver.findElementsByClassName(value)
             "accessibility" -> return driver.findElementsByAccessibilityId(value)
-            "android_uiautomator" -> return driver.findElements(MobileBy.AndroidUIAutomator(value))
+            "android_uiautomator" -> return driver.findElements(MobileBy.AndroidUIAutomator(value)) as List<MobileElement>
         }
         return driver.findElementsByXPath(value)
     }
