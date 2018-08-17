@@ -35,4 +35,9 @@ class SettingTest {
         settingBusiness!!.changeCurrency()
     }
 
+    @Test
+    fun testChangePassword() {
+        settingBusiness!!.changePassword()
+    }
+
 }

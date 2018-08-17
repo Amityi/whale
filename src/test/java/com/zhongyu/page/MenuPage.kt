@@ -10,8 +10,8 @@ import org.openqa.selenium.WebElement
  */
 class MenuPage(private val driver: MobileDriver<*>) {
 
-    private var location = Location(driver)
-    private var menu = "menu_element"
+    private val location = Location(driver)
+    private val menu = "menu_element"
 
     fun getHeardEl(): WebElement = location.element("heard", menu)
 
@@ -22,5 +22,7 @@ class MenuPage(private val driver: MobileDriver<*>) {
     fun getCurrencyTextEl(currency: String): WebElement = driver.findElement(MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(resourceId(\"android:id/list\")).scrollIntoView(new UiSelector().text(\"$currency\"))"))
 
     fun getCurrencyEl(): WebElement = location.element("currency", menu)
+
+    fun getSettingEl(): WebElement = location.element("setting", menu)
 
 }
