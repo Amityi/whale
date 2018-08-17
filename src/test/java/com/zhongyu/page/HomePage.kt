@@ -16,6 +16,8 @@ class HomePage(driver: MobileDriver<*>) {
 
     fun getMenuEl(): WebElement = location.element("menu", home)
 
+    fun getShopBagEl(): WebElement = location.element("shopbag", home)
+
     fun getBagCountEl(): WebElement = location.element("bag_count", home)
 
     fun getCategoryEl(): WebElement = location.elements("category", home)[1]

@@ -14,6 +14,8 @@ class HomeHandle(driver: MobileDriver<*>) {
 
     fun clickMenu() = homePage.getMenuEl().click()
 
+    fun clickShopBag() = homePage.getShopBagEl().click()
+
     fun getBagCount(): String = homePage.getBagCountEl().text
 
     fun clickCategory() = homePage.getCategoryEl().click()
