@@ -31,6 +31,7 @@ class SettingTest {
     @Test
     fun testChangeCurrency() {
         logger.info("更改货币测试")
+        //TODO: 修改完货币后需要查看商品中的价格是否也跟着改变
         settingBusiness!!.changeCurrency()
     }
 
