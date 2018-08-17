@@ -6,7 +6,7 @@
 
 - 运行测试
 ```
-mvn test -D site=hk
+mvn test -D site=MX
 ```
 
 - Appium inspector
