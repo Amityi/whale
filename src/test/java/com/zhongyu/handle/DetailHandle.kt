@@ -16,4 +16,6 @@ class DetailHandle(driver: MobileDriver<*>) {
 
     fun clickBuy() = detailPage.getBuyEl().click()
 
+    fun clickCheckout() = detailPage.getCheckoutEl().click()
+
 }

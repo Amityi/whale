@@ -18,4 +18,6 @@ class DetailPage(driver: MobileDriver<*>) {
 
     fun getBuyEl(): WebElement = location.element("buy", detail)
 
+    fun getCheckoutEl(): WebElement = location.element("checkout", detail)
+
 }

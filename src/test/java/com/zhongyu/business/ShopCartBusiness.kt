@@ -61,6 +61,7 @@ class ShopCartBusiness(driver: MobileDriver<*>) {
         detailHandle.clickSize()
         detailHandle.clickBuy()
         homeHandle.clickShopBag()
+        detailHandle.clickCheckout()
     }
 
     fun count(): String = homeHandle.getBagCount()
