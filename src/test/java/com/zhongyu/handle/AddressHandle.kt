@@ -10,6 +10,8 @@ class AddressHandle(driver: MobileDriver<*>) {
 
     private val addressPage: AddressPage = AddressPage(driver)
 
+    fun getCount(): Int = addressPage.getCountEl().count()
+
     fun clickAddAddress() = addressPage.getAddAddressEl().click()
 
     fun clickDelete() = addressPage.getDeleteEl().click()

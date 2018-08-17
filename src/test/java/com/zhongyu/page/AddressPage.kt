@@ -12,6 +12,8 @@ class AddressPage(driver: MobileDriver<*>) {
     private val location = Location(driver)
     private val address = "address_element"
 
+    fun getCountEl(): List<WebElement> = location.elements("count", address)
+
     fun getAddAddressEl(): WebElement = location.element("add_button", address)
 
     fun getDeleteEl(): WebElement = location.element("delete", address)

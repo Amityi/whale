@@ -17,7 +17,7 @@ class AddressBusiness(driver: MobileDriver<*>) {
     private val menuHandle: MenuHandle = MenuHandle(driver)
     private val addressHandle: AddressHandle = AddressHandle(driver)
 
-    private fun init(){
+    private fun init() {
         logger.info("点击地址项")
         homeHandle.clickSkip()
         homeHandle.clickMenu()
@@ -42,10 +42,14 @@ class AddressBusiness(driver: MobileDriver<*>) {
         addressHandle.clickSave()
     }
 
-    fun deleteAddress(){
+    fun deleteAddress() {
         init()
-        addressHandle.clickDelete()
-        addressHandle.clickConfirmDelete()
+        if (addressHandle.getCount() > 0) {
+            addressHandle.clickDelete()
+            addressHandle.clickConfirmDelete()
+        } else {
+            logger.info("没有添加地址，请添加地址")
+        }
     }
 
 }
