@@ -9,10 +9,14 @@ import org.openqa.selenium.WebElement
  */
 class AddressPage(driver: MobileDriver<*>) {
 
-    private var location = Location(driver)
-    private var address = "address_element"
+    private val location = Location(driver)
+    private val address = "address_element"
 
     fun getAddAddressEl(): WebElement = location.element("add_button", address)
+
+    fun getDeleteEl(): WebElement = location.element("delete", address)
+
+    fun getConfirmDelete(): WebElement = location.element("confirm_delete", address)
 
     fun getFirstNameEl(): WebElement = location.element("first_name", address)
 

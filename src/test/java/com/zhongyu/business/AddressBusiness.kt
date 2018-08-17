@@ -17,11 +17,15 @@ class AddressBusiness(driver: MobileDriver<*>) {
     private val menuHandle: MenuHandle = MenuHandle(driver)
     private val addressHandle: AddressHandle = AddressHandle(driver)
 
-    fun addAddress() {
-        //TODO: 需要判断当前添加地址的国家地区是否和测试站点一致
+    private fun init(){
         homeHandle.clickSkip()
         homeHandle.clickMenu()
         menuHandle.clickAddress()
+    }
+
+    fun addAddress() {
+        init()
+        //TODO: 需要判断当前添加地址的国家地区是否和测试站点一致
         addressHandle.clickAddAddress()
         addressHandle.sendFirstName("宇")
         addressHandle.sendLastName("鐘")
@@ -35,6 +39,12 @@ class AddressBusiness(driver: MobileDriver<*>) {
         addressHandle.sendZip("12345")
         addressHandle.clickSetDefaultAddress()
         addressHandle.clickSave()
+    }
+
+    fun deleteAddress(){
+        init()
+        addressHandle.clickDelete()
+        addressHandle.clickConfirmDelete()
     }
 
 }

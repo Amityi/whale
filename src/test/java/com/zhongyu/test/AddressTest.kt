@@ -30,9 +30,9 @@ class AddressTest {
         addressBusiness!!.addAddress()
     }
 
-    @Test(enabled = false)
+    @Test(priority = 3)
     fun testDeleteAddress(){
-
+        addressBusiness!!.deleteAddress()
     }
 
     @Test(enabled = false)

@@ -12,6 +12,10 @@ class AddressHandle(driver: MobileDriver<*>) {
 
     fun clickAddAddress() = addressPage.getAddAddressEl().click()
 
+    fun clickDelete() = addressPage.getDeleteEl().click()
+
+    fun clickConfirmDelete() = addressPage.getConfirmDelete().click()
+
     fun sendFirstName(firstName: String) = addressPage.getFirstNameEl().sendKeys(firstName)
 
     fun sendLastName(lastName: String) = addressPage.getLastNameEl().sendKeys(lastName)
