@@ -18,6 +18,7 @@ class AddressBusiness(driver: MobileDriver<*>) {
     private val addressHandle: AddressHandle = AddressHandle(driver)
 
     private fun init(){
+        logger.info("点击地址项")
         homeHandle.clickSkip()
         homeHandle.clickMenu()
         menuHandle.clickAddress()
