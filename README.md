@@ -13,10 +13,10 @@ mvn test -D site=MX
 ```json
 {
   "platformName": "Android",
-  "deviceName": "MuMu",
+  "deviceName": "127.0.0.1:7555",
+  "noReset": true,
   "appPackage": "com.zzkko",
-  "appActivity": "com.zzkko.bussiness.login.ui.WelcomeActivity",
-  "noReset": true
+  "appActivity": "com.zzkko.bussiness.login.ui.WelcomeActivity"
 }
 ```
 
